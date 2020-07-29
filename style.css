@@ -1,0 +1,386 @@
+/* General */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  font-family: 'Roboto', sans-serif;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+p{
+  font-size: 2em;
+  color: #f0f0f0;
+
+}
+i {
+  margin:7px;
+  color:#f0f0f0;
+
+}
+i:hover {
+  transform: scale(1.1);
+}
+/* ******************************************************** */
+
+/* Header */
+
+.header {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 30;
+  background-color: #222;
+  padding: 16px 0;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 5px 7px;
+  margin: 0px 4px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  color: #AA0000;
+}
+
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+  margin-right: 20px;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+/* ******************************************** */
+/* Split the screen in half */
+
+#split-screen{
+ cursor: default;
+ position: relative;
+ width:100%;
+ min-height: 55vw;
+ overflow: hidden;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  overflow: hidden;
+  left: 0;
+  background-color: #222;
+  transform: skewX(-20deg);
+  margin-left: -750px;
+  width: 100vw;
+  min-height:55vw;
+  z-index:2;
+}
+.left:hover{
+  animation: 4s ease-in-out infinite;
+  width: 101vw;
+}
+
+/* White boxes */
+ .white-box {
+  display: block;
+  background-color: #f0f0f0;
+  width: 93vw;
+  height: 16vw;
+  margin-top:27px
+}
+.white-box:hover{
+  width:95vw;
+  animation: 3s ease-in-out infinite;
+}
+/* Name */
+ .myName{
+  color: #222;
+  float: right;
+  margin-right: 7%;
+  margin-top: 1%;
+  transform: skewX(20deg);
+}
+.myName h1{
+  font-family: 'Bebas Neue', sans-serif;
+  color: #222;
+}
+.lName {
+  letter-spacing: 1px;
+  font-size: 12em;
+}
+
+.fName {
+  letter-spacing: -2px;
+  font-size: 11em;
+  margin-right:2px;
+
+  background-image: -webkit-linear-gradient(left, #222 25%,#4A1010 37.5%,#600000, #4A1010 62.5%, #222 75%);
+  background-image: linear-gradient(90deg, #222 25%,#4A1010 37.5%,#600000, #4A1010 62.5%, #222 75%);
+  background-position: right center;
+  background-size: 400% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #222;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  transition: color 200ms linear;
+}
+.fName:hover{
+  background-position: left center;
+  transition: background-position 1500ms ease-out;
+}
+
+.mName {
+  font-size: 13em;
+  letter-spacing:7px;
+  margin-right: -8px;
+  margin-top: -10px;
+
+    background-image: -webkit-linear-gradient(left, #222 25%,#444 37.5%,#555, #444 62.5%, #222 75%);
+    background-image: linear-gradient(90deg, #222 25%, #444 37.5%,#666, #444 62.5%, #222 75%);
+    background-position: right center;
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #222;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    transition: color 200ms linear;
+}
+.mName:hover{
+  background-position: left center;
+  transition: background-position 1500ms ease-out;
+}
+
+/* About me section */
+#aboutMeText {
+  display: none;
+  transform: skewX(20deg);
+  float:right;
+  word-wrap: break-word;
+  width: 35%;
+  margin-top: 15%;
+  max-height: 100%;
+  margin-right: 10%;
+  color: #fff;
+}
+
+#aboutMeText p{
+  margin-top: 20px;
+  font-size: 1em;
+}
+
+
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: maroon;
+  width: 100vw;
+  z-index: 0;
+}
+
+/* If you want the content centered horizontally and vertically */
+.right .centered {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+/* .centered img {
+  width: 150px;
+  border-radius: 50%;
+} */
+/* ******************Scroll Button********************* */
+
+#scrollButton a{
+  padding-top: 4px;
+}
+
+#scrollButton a span{
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+
+}
+
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+
+
+
+/* ****************************Portfolio*************************************** */
+#portfolio{
+  background: #222;
+  color: #f0f0f0;
+  position: absolute;
+  z-index: 2;
+  padding-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
+#portfolio h1{
+font-size: 3em;
+}
+
+.showcase{
+  margin: 0;
+  padding: 0;
+  min-height: 80vh;
+  display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+}
+
+
+.container{
+        position: relative;
+        width: 90%;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(auto-fill,minmax(260px, 1fr));
+        grid-gap: 0 40px;
+    }
+    .container .box{
+        position: relative;
+        height: 300px;
+        background: #222;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #222;
+    }
+    .container .box:before{
+        content: '';
+        position: absolute;
+        top:-2px;
+        bottom:-2px;
+        left:-2px;
+        right:-2px;
+        background:#fff;
+        z-index: -1;
+        transform: skew(2deg, 2deg);
+    }
+    .container .box:nth-child(1):before{
+        background: linear-gradient(315deg, #ff0057,#e64a19);
+    }
+    .container .box:nth-child(2):before{
+        background: linear-gradient(315deg, #89ff07,#00bcd4);
+    }
+    .container .box:nth-child(3):before{
+        background: linear-gradient(315deg, #e91e63,#5d02ff);
+    }
+
+    .content{
+        position: relative;
+        padding: 20px;
+    }
+
+    .box .content h3{
+        margin: 0 0 10px;
+        padding: 0;
+        font-weight: 500;
+        color: #fff;
+
+    }
+    .box .content p{
+        margin: 0;
+        padding: 0;
+        font-weight: 500;
+        color: #fff;
+        font-size: 16px;
+    }
+    .box .content a{
+        position: relative;
+        margin: 20px 0 0;
+        padding: 10px 20px;
+        font-weight: 500;
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 16px;
+        display: inline-block;
+        transition: 0.5s;
+        transform: translateY(-40px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .box:hover .content a{
+        transform: translateY(0);
+        opacity: 1;
+        visibility:visible;
+
+    }
+
+    .box .content a:hover{
+        color:#000;
+        background: #fff;
+    }
