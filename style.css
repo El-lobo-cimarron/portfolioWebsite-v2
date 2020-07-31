@@ -112,7 +112,7 @@ i:hover {
 
 /* White boxes */
  .white-box {
-  display: block;
+
   background-color: #f0f0f0;
   width: 93vw;
   height: 16vw;
@@ -122,6 +122,49 @@ i:hover {
   width:95vw;
   animation: 3s ease-in-out infinite;
 }
+
+/* Animation for white-boxes */
+
+.slide-left{
+  animation: slideLeft .5s ease-in;
+  animation-fill-mode: forwards;
+}
+.slide-left:nth-child(1){
+  animation-delay: .1s
+}
+.slide-left:nth-child(2){
+  animation-delay: .2s
+}
+.slide-left:nth-child(3){
+  animation-delay: .3s
+}
+@keyframes slideLeft{
+  100%{
+    transform: translateX(-1000px);
+  }
+}
+.slide-right{
+  animation-fill-mode: forwards;
+  animation: slideRight .5s ease-in;
+}
+/* .slide-right:nth-child(1){
+  animation-delay: .05s
+}
+.slide-right:nth-child(2){
+  animation-delay: .1s
+}
+.slide-right:nth-child(3){
+  animation-delay: .5s
+} */
+@keyframes slideRight{
+  0%{
+      transform: translateX(-1000px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
 /* Name */
  .myName{
   color: #222;

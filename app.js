@@ -31,32 +31,39 @@
 // About me animation
 // Problem with sliding to the left
 // About me text doesnt show up
-var abmButton = "About Me";
-var whiteBox = $(".white-box");
-var abmText = $("#aboutMeText");
+
 
 $(document).ready(function(){
   $("#aboutMe").click(function(){
-    if (abmButton == "About Me"){
-      // console.log(abmButton);
-      whiteBox.style.display = "none";
-      // White boxes are sliding to the left
+    var $this = $(this),
+    clickNum = $this.data('clickNum');
+    if (!clickNum) clickNum = 1;
+    $this.data('clickNum', ++clickNum);
+
+    if (clickNum%2 ) { //Odd (Home)
+      $(".white-box").removeClass("slide-left");
+        $(".white-box").addClass("slide-right");
+        $(".slide-right").on('animationend',
+      function(){
+        $(".white-box").removeClass("slide-right");
+      }
+    );
       // About Me Text fading in
-      abmButton = "Home";
-    } else {
-      // console.log(abmButton);
-        whiteBox.style.display = "block";
+    } else { // How do not repeat? (About me)
+
+      if(clickNum===1){
+        $(".white-box").addClass("slide-left");
+      } else {
+        $(".white-box").addClass("slide-left");
+        $(".white-box").removeClass("slide-right");
+      }
       // About me text fade out
-      // White boxes sliding right
-      abmButton = "About Me";
     }
      // $(".white-box").animate(200);
 
-    $(this).text(function(i, text){
+  $("#aboutMe").text(function(i, text){
       return text === "About me" ? "Home" : "About me";
     });
 
-
   });
-
 });
