@@ -7,9 +7,6 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-
-
-
 p{
   font-size: 2em;
   color: #f0f0f0;
@@ -23,6 +20,9 @@ i {
 i:hover {
   transform: scale(1.1);
 }
+
+
+
 /* ******************************************************** */
 
 /* Header */
@@ -54,7 +54,6 @@ i:hover {
   color: #AA0000;
 }
 
-
 /* Float the link section to the right */
 .header-right {
   float: right;
@@ -73,8 +72,11 @@ i:hover {
   }
 }
 
-/* ******************************************** */
-/* Split the screen in half */
+
+
+
+/* *********************Split the screen in half*********************** */
+
 
 #split-screen{
  cursor: default;
@@ -280,12 +282,11 @@ i:hover {
   text-align: center;
 }
 
-/* Style the image inside the centered container, if needed */
-/* .centered img {
-  width: 150px;
-  border-radius: 50%;
-} */
+
+
+
 /* ******************Scroll Button********************* */
+
 
 #scrollButton a{
   padding-top: 4px;
@@ -347,11 +348,8 @@ i:hover {
   width: 100%;
   text-align: center;
 }
-
 #portfolio h1{
-font-size: 3em;
-}
-
+  font-size: 3em;}
 .showcase{
   margin: 0;
   padding: 0;
@@ -361,8 +359,6 @@ font-size: 3em;
         align-items: center;
         overflow: hidden;
 }
-
-
 .container{
         position: relative;
         width: 90%;
