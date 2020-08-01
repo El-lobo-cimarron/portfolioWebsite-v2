@@ -29,11 +29,11 @@
 
 
 // About me animation
-// Problem with sliding to the left
 // About me text doesnt show up
 
 
 $(document).ready(function(){
+  $("#aboutMeText").css("display", "none"); //Hiding About Me Text on page load
   $("#aboutMe").click(function(){
     var $this = $(this),
     clickNum = $this.data('clickNum');
@@ -41,6 +41,9 @@ $(document).ready(function(){
     $this.data('clickNum', ++clickNum);
 
     if (clickNum%2 ) { //Odd (Home)
+      // White boxes move to the right
+      if (clickNum==2){
+      }
       $(".white-box").removeClass("slide-left");
         $(".white-box").addClass("slide-right");
         $(".slide-right").on('animationend',
@@ -48,22 +51,31 @@ $(document).ready(function(){
         $(".white-box").removeClass("slide-right");
       }
     );
-      // About Me Text fading in
-    } else { // How do not repeat? (About me)
+      // About Me Text fading out
+        $("#aboutMeText").removeClass("abm-start");
+        $("#aboutMeText").addClass("abm-end");
+        $("abm-end").on('animationend', //removes About me after animation end
+      function(){
+        $("#aboutMeText").removeClass("abm-end");
+      });
 
-      if(clickNum===1){
+
+
+    } else { // (About me)
         $(".white-box").addClass("slide-left");
-      } else {
-        $(".white-box").addClass("slide-left");
+        $("#aboutMeText").css("display", "block");
+      if(clickNum!==1){
         $(".white-box").removeClass("slide-right");
+        // About me text fading in
+        $("#aboutMeText").removeClass("abm-end");
+        $("#aboutMeText").addClass("abm-start");
       }
-      // About me text fade out
+
     }
-     // $(".white-box").animate(200);
 
   $("#aboutMe").text(function(i, text){
       return text === "About me" ? "Home" : "About me";
     });
-
+    console.log(clickNum);
   });
 });

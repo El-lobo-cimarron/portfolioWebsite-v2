@@ -39,7 +39,7 @@ i:hover {
 /* Style the header links */
 .header a {
   float: left;
-  color: white;
+  color: #f0f0f0;
   text-align: center;
   padding: 5px 7px;
   margin: 0px 4px;
@@ -87,7 +87,7 @@ i:hover {
 .split {
   height: 100%;
   width: 50%;
-  position: fixed;
+  position: absolute;
   z-index: 1;
   top: 0;
   overflow-x: hidden;
@@ -106,18 +106,16 @@ i:hover {
   z-index:2;
 }
 .left:hover{
-  animation: 4s ease-in-out infinite;
   width: 101vw;
 }
 
 /* White boxes */
  .white-box {
-
   background-color: #f0f0f0;
   width: 93vw;
   height: 16vw;
-  margin-top:27px
-}
+  margin-top:27px;
+  z-index: 4;}
 .white-box:hover{
   width:95vw;
   animation: 3s ease-in-out infinite;
@@ -147,15 +145,6 @@ i:hover {
   animation-fill-mode: forwards;
   animation: slideRight .5s ease-in;
 }
-/* .slide-right:nth-child(1){
-  animation-delay: .05s
-}
-.slide-right:nth-child(2){
-  animation-delay: .1s
-}
-.slide-right:nth-child(3){
-  animation-delay: .5s
-} */
 @keyframes slideRight{
   0%{
       transform: translateX(-1000px);
@@ -166,13 +155,13 @@ i:hover {
 }
 
 /* Name */
+
  .myName{
   color: #222;
   float: right;
   margin-right: 7%;
   margin-top: 1%;
-  transform: skewX(20deg);
-}
+  transform: skewX(20deg);}
 .myName h1{
   font-family: 'Bebas Neue', sans-serif;
   color: #222;
@@ -181,7 +170,6 @@ i:hover {
   letter-spacing: 1px;
   font-size: 12em;
 }
-
 .fName {
   letter-spacing: -2px;
   font-size: 11em;
@@ -202,7 +190,6 @@ i:hover {
   background-position: left center;
   transition: background-position 1500ms ease-out;
 }
-
 .mName {
   font-size: 13em;
   letter-spacing:7px;
@@ -226,24 +213,55 @@ i:hover {
 }
 
 /* About me section */
-#aboutMeText {
-  display: none;
-  transform: skewX(20deg);
-  float:right;
-  word-wrap: break-word;
-  width: 35%;
-  margin-top: 15%;
-  max-height: 100%;
-  margin-right: 10%;
-  color: #fff;
-}
 
+#aboutMeText {
+  position: absolute;
+  pointer-events:none;
+  z-index: 3;
+  top:0;
+  left:5%;
+  word-wrap: break-word;
+  width: 500px;
+  height: 100%;
+  margin-top: 20%;
+  color:#f0f0f0;
+
+
+}
 #aboutMeText p{
   margin-top: 20px;
   font-size: 1em;
 }
 
-
+.abm-start{
+ animation: 1.5s fadeIn;
+ animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  40%{
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.abm-end{
+  animation: .3s fadeOut;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    opacity: 0;
+  }
+}
 
 /* Control the right side */
 .right {
