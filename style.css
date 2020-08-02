@@ -1,4 +1,7 @@
 /* General */
+html{
+  scroll-behavior: smooth;
+}
 body {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -20,7 +23,9 @@ i {
 i:hover {
   transform: scale(1.1);
 }
-
+a{
+  cursor: pointer
+}
 
 
 /* ******************************************************** */
@@ -28,6 +33,7 @@ i:hover {
 /* Header */
 
 .header {
+
   width: 100%;
   overflow: hidden;
   position: fixed;
@@ -51,7 +57,7 @@ i:hover {
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  color: #AA0000;
+  color: #e02611;
 }
 
 /* Float the link section to the right */
@@ -82,8 +88,11 @@ i:hover {
  cursor: default;
  position: relative;
  width:100%;
- min-height: 55vw;
+ min-height: 57vw;
  overflow: hidden;
+ background-image: url("https://bgwall.net/wp-content/uploads/2014/09/dark-forest-red-autumn-wallpaper-desktop.jpg");
+ background-repeat: no-repeat; /* Do not repeat the image */
+ background-size: cover;
 }
 
 .split {
@@ -100,6 +109,7 @@ i:hover {
 .left {
   overflow: hidden;
   left: 0;
+  opacity: 1;
   background-color: #222;
   transform: skewX(-20deg);
   margin-left: -750px;
@@ -177,8 +187,8 @@ i:hover {
   font-size: 11em;
   margin-right:2px;
 
-  background-image: -webkit-linear-gradient(left, #222 25%,#4A1010 37.5%,#600000, #4A1010 62.5%, #222 75%);
-  background-image: linear-gradient(90deg, #222 25%,#4A1010 37.5%,#600000, #4A1010 62.5%, #222 75%);
+  background-image: -webkit-linear-gradient(left, #222 25%,#5A1010 37.5%,#800000, #5A1010 62.5%, #222 75%);
+  background-image: linear-gradient(90deg, #222 25%,#5A1010 37.5%,#800000, #5A1010 62.5%, #222 75%);
   background-position: right center;
   background-size: 400% auto;
   -webkit-background-clip: text;
@@ -199,7 +209,7 @@ i:hover {
   margin-top: -10px;
 
     background-image: -webkit-linear-gradient(left, #222 25%,#444 37.5%,#555, #444 62.5%, #222 75%);
-    background-image: linear-gradient(90deg, #222 25%, #444 37.5%,#666, #444 62.5%, #222 75%);
+    background-image: linear-gradient(90deg, #222 25%, #444 37.5%,#555, #444 62.5%, #222 75%);
     background-position: right center;
     background-size: 400% auto;
     -webkit-background-clip: text;
@@ -268,7 +278,6 @@ i:hover {
 /* Control the right side */
 .right {
   right: 0;
-  background-color: maroon;
   width: 100vw;
   z-index: 0;
 }
@@ -285,59 +294,6 @@ i:hover {
 
 
 
-/* ******************Scroll Button********************* */
-
-
-#scrollButton a{
-  padding-top: 4px;
-}
-
-#scrollButton a span{
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  margin-left: -12px;
-  border-left: 1px solid #fff;
-  border-bottom: 1px solid #fff;
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  -webkit-animation: sdb 1.5s infinite;
-  animation: sdb 1.5s infinite;
-  box-sizing: border-box;
-
-}
-
-@-webkit-keyframes sdb {
-  0% {
-    -webkit-transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-@keyframes sdb {
-  0% {
-    transform: rotate(-45deg) translate(0, 0);
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(-45deg) translate(-20px, 20px);
-    opacity: 0;
-  }
-}
-
-
-
 /* ****************************Portfolio*************************************** */
 #portfolio{
   background: #222;
@@ -349,7 +305,8 @@ i:hover {
   text-align: center;
 }
 #portfolio h1{
-  font-size: 3em;}
+  font-size: 3em;
+}
 .showcase{
   margin: 0;
   padding: 0;
@@ -365,7 +322,7 @@ i:hover {
         display: grid;
         grid-template-rows: auto;
         grid-template-columns: repeat(auto-fill,minmax(260px, 1fr));
-        grid-gap: 0 40px;
+        grid-gap: 0 80px;
     }
     .container .box{
         position: relative;
@@ -387,14 +344,8 @@ i:hover {
         z-index: -1;
         transform: skew(2deg, 2deg);
     }
-    .container .box:nth-child(1):before{
-        background: linear-gradient(315deg, #ff0057,#e64a19);
-    }
-    .container .box:nth-child(2):before{
-        background: linear-gradient(315deg, #89ff07,#00bcd4);
-    }
-    .container .box:nth-child(3):before{
-        background: linear-gradient(315deg, #e91e63,#5d02ff);
+    .container .box:before{
+        background: linear-gradient(315deg, #b70000,#800000);
     }
 
     .content{
@@ -440,4 +391,12 @@ i:hover {
     .box .content a:hover{
         color:#000;
         background: #fff;
+    }
+
+    /* Footer */
+
+    .footer p{
+      font-size: 15px;
+      color: #f0f0f0;
+      text-align: center;
     }
