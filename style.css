@@ -88,7 +88,7 @@ a{
  cursor: default;
  position: relative;
  width:100%;
- min-height: 57vw;
+ height: 50vw;
  overflow: hidden;
  background-image: url("https://bgwall.net/wp-content/uploads/2014/09/dark-forest-red-autumn-wallpaper-desktop.jpg");
  background-repeat: no-repeat; /* Do not repeat the image */
@@ -113,23 +113,23 @@ a{
   background-color: #222;
   transform: skewX(-20deg);
   margin-left: -50%;
-  width: 100%;
-  min-height:100%;
+  width: 95%;
+  height:100%;
   z-index:2;
 }
 .left:hover{
-  width: 101%;
+  width: 96%;
 }
 
 /* White boxes */
  .white-box {
   background-color: #f0f0f0;
-  width: 93vw;
-  height: 16vw;
-  margin-top:27px;
+  width: 91vw;
+  height: 28%;
+  margin-top:2%;
   z-index: 4;}
 .white-box:hover{
-  width:95vw;
+  width:92vw;
   animation: 3s ease-in-out infinite;
 }
 
@@ -172,7 +172,7 @@ a{
   color: #222;
   float: right;
   margin-right: 10%;
-  margin-top: 1%;
+  /* margin-top: 1%; */
   transform: skewX(20deg);}
 .myName h1{
   font-family: 'Bebas Neue', sans-serif;
@@ -180,12 +180,11 @@ a{
 }
 .lName {
   letter-spacing: 1px;
-  font-size: 12em;
+  font-size: 12vw;
 }
 .fName {
   letter-spacing: -2px;
-  font-size: 11em;
-  margin-right:2px;
+  font-size: 11vw;
 
   background-image: -webkit-linear-gradient(left, #222 25%,#5A1010 37.5%,#800000, #5A1010 62.5%, #222 75%);
   background-image: linear-gradient(90deg, #222 25%,#5A1010 37.5%,#800000, #5A1010 62.5%, #222 75%);
@@ -203,10 +202,9 @@ a{
   transition: background-position 1500ms ease-out;
 }
 .mName {
-  font-size: 13em;
+  font-size: 13vw;
   letter-spacing:7px;
-  margin-right: -8px;
-  margin-top: -10px;
+
 
     background-image: -webkit-linear-gradient(left, #222 25%,#444 37.5%,#555, #444 62.5%, #222 75%);
     background-image: linear-gradient(90deg, #222 25%, #444 37.5%,#555, #444 62.5%, #222 75%);
