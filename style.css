@@ -112,7 +112,7 @@ a{
   opacity: 1;
   background-color: #222;
   transform: skewX(-20deg);
-  margin-left: -750px;
+  margin-left: -50%;
   width: 100vw;
   min-height:55vw;
   z-index:2;
