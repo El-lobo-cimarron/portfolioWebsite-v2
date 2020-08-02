@@ -113,12 +113,12 @@ a{
   background-color: #222;
   transform: skewX(-20deg);
   margin-left: -50%;
-  width: 100vw;
-  min-height:55vw;
+  width: 100%;
+  min-height:100%;
   z-index:2;
 }
 .left:hover{
-  width: 101vw;
+  width: 101%;
 }
 
 /* White boxes */
@@ -171,7 +171,7 @@ a{
  .myName{
   color: #222;
   float: right;
-  margin-right: 7%;
+  margin-right: 10%;
   margin-top: 1%;
   transform: skewX(20deg);}
 .myName h1{
