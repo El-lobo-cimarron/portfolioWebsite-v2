@@ -33,7 +33,6 @@ a{
 /* Header */
 
 .header {
-
   width: 100%;
   overflow: hidden;
   position: fixed;
@@ -88,7 +87,7 @@ a{
  cursor: default;
  position: relative;
  width:100%;
- height: 50vw;
+ min-height: 57vw;
  overflow: hidden;
  background-image: url("https://bgwall.net/wp-content/uploads/2014/09/dark-forest-red-autumn-wallpaper-desktop.jpg");
  background-repeat: no-repeat; /* Do not repeat the image */
@@ -107,29 +106,38 @@ a{
 
 /* Control the left side */
 .left {
+  margin-top: 35px;
   overflow: hidden;
   left: 0;
   opacity: 1;
   background-color: #222;
   transform: skewX(-20deg);
   margin-left: -50%;
-  width: 95%;
-  height:100%;
+  width: 100%;
+  min-height:100%;
   z-index:2;
 }
 .left:hover{
-  width: 96%;
+  width: 101%;
 }
 
 /* White boxes */
  .white-box {
   background-color: #f0f0f0;
-  width: 91vw;
-  height: 28%;
-  margin-top:2%;
+  width: 93vw;
+  height: 16vw;
+  /* margin-top:27px; */
   z-index: 4;}
+
+.white-box:nth-child(2){
+  margin-top:2.5%;
+}
+.white-box:nth-child(3){
+  margin-top:2.5%;
+}
+
 .white-box:hover{
-  width:92vw;
+  width:95vw;
   animation: 3s ease-in-out infinite;
 }
 
@@ -172,7 +180,7 @@ a{
   color: #222;
   float: right;
   margin-right: 10%;
-  /* margin-top: 1%; */
+  margin-top: 1%;
   transform: skewX(20deg);}
 .myName h1{
   font-family: 'Bebas Neue', sans-serif;
@@ -180,11 +188,12 @@ a{
 }
 .lName {
   letter-spacing: 1px;
-  font-size: 12vw;
+  font-size: 12em;
 }
 .fName {
   letter-spacing: -2px;
-  font-size: 11vw;
+  font-size: 11em;
+  margin-right:2px;
 
   background-image: -webkit-linear-gradient(left, #222 25%,#5A1010 37.5%,#800000, #5A1010 62.5%, #222 75%);
   background-image: linear-gradient(90deg, #222 25%,#5A1010 37.5%,#800000, #5A1010 62.5%, #222 75%);
@@ -202,9 +211,10 @@ a{
   transition: background-position 1500ms ease-out;
 }
 .mName {
-  font-size: 13vw;
+  font-size: 13em;
   letter-spacing:7px;
-
+  margin-right: -8px;
+  margin-top: -10px;
 
     background-image: -webkit-linear-gradient(left, #222 25%,#444 37.5%,#555, #444 62.5%, #222 75%);
     background-image: linear-gradient(90deg, #222 25%, #444 37.5%,#555, #444 62.5%, #222 75%);
@@ -356,7 +366,6 @@ a{
         padding: 0;
         font-weight: 500;
         color: #fff;
-
     }
     .box .content p{
         margin: 0;
