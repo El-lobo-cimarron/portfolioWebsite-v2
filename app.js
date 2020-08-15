@@ -30,7 +30,7 @@ if (window.matchMedia("(max-device-width: 600px)").matches){
       $(".mName").removeClass("mName-hover");
   });
 
-    // $(".mName").addClass("mName-hover");
+
 
   // About me animation
   $("#aboutMeText").css("display", "none"); //Hiding About Me Text on page load
@@ -57,7 +57,7 @@ if (window.matchMedia("(max-device-width: 600px)").matches){
           $("#myName").removeClass("slide-left").addClass("slide-right");
           $(".slide-right").on('animationend', //removes the bug with animation
         function(){
-          $(".white-box").removeClass("slide-right");
+          $(".white-box").removeClass("slide-right").css("pointer-events: initial");
           $("#myName").removeClass("slide-right");
         }
       );
@@ -83,11 +83,11 @@ if (window.matchMedia("(max-device-width: 600px)").matches){
         }
       } else {
         // White boxes move to the left
-          $(".white-box").addClass("slide-left");
+          $(".white-box").addClass("slide-left").css("pointer-events: none");
           $("#myName").addClass("slide-left");
           $("#aboutMeText").css("display", "block");
         if(clickNum!==1){ //Clicked 3 or more times
-          $(".white-box").removeClass("slide-right");
+          $(".white-box").removeClass("slide-right").css("pointer-events: none");
           $("#myName").removeClass("slide-right");
           // About me text fading in
           $("#aboutMeText").removeClass("abm-end").addClass("abm-start");
